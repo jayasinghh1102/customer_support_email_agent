@@ -9,3 +9,4 @@ pypdf
 torch
 transformers
 accelerate
+peft
