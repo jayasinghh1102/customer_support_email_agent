@@ -14,6 +14,12 @@ CHECK_INTERVAL_SECONDS = int(os.environ.get("CHECK_INTERVAL_SECONDS", 30))
 # Knowledge Base Configuration
 KNOWLEDGE_BASE_DIR = os.environ.get("KNOWLEDGE_BASE_DIR", "knowledge_base")
 
+# Local base SLM
+LOCAL_SLM_PATH = os.environ.get("LOCAL_SLM_PATH")
+
+# Fine tuned SLM checkpoints
+FINETUNE_SLM_PATH = os.environ.get("FINETUNE_SLM_PATH")
+
 # Validate config
 def validate_config():
     """Checks if essential configuration variables are set."""
@@ -24,3 +30,5 @@ def validate_config():
         )
     print("Configuration validated successfully.")
 
+# LLM API 
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")

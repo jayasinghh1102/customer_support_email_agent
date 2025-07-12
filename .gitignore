@@ -1,8 +1,10 @@
 .env
 venv/
+.venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.sqlite3
 .DS_Store
+Mistral7B-customer-dataset-finetuned/

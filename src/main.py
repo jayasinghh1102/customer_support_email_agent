@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+# from .llm_integration import slm_handler
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from dotenv import load_dotenv
@@ -39,6 +40,9 @@ def main():
     if not mail:
         print("Could not connect to inbox. Exiting.")
         return
+    
+    # Load local model
+    
 
     # 5. Start the main agent loop
     print("\nAgent is running. Press Ctrl+C to stop.")
@@ -74,6 +78,8 @@ def main():
         if mail:
             mail.logout()
             print("Logged out and closed email connection.")
+        # slm_handler.unload_slm()
+        print("Local model unloaded successfully")
 
 if __name__ == "__main__":
     print("--- Agent execution has started ---")
